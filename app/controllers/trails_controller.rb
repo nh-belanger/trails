@@ -1,6 +1,11 @@
 class TrailsController < ApplicationController
   def index
     @trails = Trail.all
+    @hash = Gmaps4rails.build_markers(@trails) do |trail, marker|
+      marker.lat trail.latitude
+      marker.lng trail.longitude
+      marker.title trail.name
+    end
   end
 
   def show
@@ -37,6 +42,6 @@ class TrailsController < ApplicationController
   private
 
   def trail_params
-    params.require(:trail).permit(:address, :trailhead_lat, :trailhead_long, :length, :name)
+    params.require(:trail).permit(:address, :latitude, :longitude, :length, :name)
   end
 end
