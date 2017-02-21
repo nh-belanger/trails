@@ -1,0 +1,62 @@
+body {
+  background: url(background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.title-box {
+  margin-top: 10%;
+  background: rgba(0, 0, 0, .7);
+  /*padding: 10px 10px 10px 10px;*/
+  /*border-color: rgb(168, 168, 168);*/
+  border-style: solid;
+}
+
+.table-box {
+  margin-top: 2.5%;
+
+  /*padding: 10px 10px 10px 10px;*/
+  /*border-color: rgb(168, 168, 168);*/
+
+}
+
+.title-text {
+  color: white;
+  text-align: center;
+  font-family: 'Sanchez', serif;
+}
+
+td {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+th {
+  font-family: 'Sanchez', serif;
+}
+
+/*TOP BAR STUFF*/
+.top-bar {
+  padding: 0vw;
+  margin: 0px;
+  background: rgba(0, 0, 0, 0.7);
+
+  font-size: 125%;
+
+  color: white;
+  font-family: 'Sanchez', serif;
+}
+
+.top-bar-title {
+  color: white;
+  font-family: 'Sanchez', serif, !important;
+  font-size: 150%;
+  margin-left: 10px;
+}
+
+.top-bar ul {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  margin-top: 9px;
+}
