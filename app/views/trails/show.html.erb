@@ -21,21 +21,31 @@
   <div class="small-12 large-8 columns">
     <div class="show-box">
       <h4 class="custom-text"> Description </h4>
-      <p class = "custom-text-body"> <%= @trail.description %> </p>
+      <% if @trail.description != '' %>
+        <p class = "custom-text-body"> <%= @trail.description %> </p>
+      <% else %>
+        <p class = "custom-text-body">No description available.</p>
+      <% end %>
     </div>
   </div>
 
   <div class="small-12 large-4 columns">
     <div class="show-box">
       <h4 class="custom-text"> The Facts </h4>
-      <p class = "custom-text-body"> <%= @trail.name %> </p>
-      <p class = "custom-text-body"> <%= @trail.address %> </p>
-      <p class = "custom-text-body"> <%= @trail.length %> </p>
-      <p class = "custom-text-body"> <%= @trail.latitude %> </p>
-      <p class = "custom-text-body"> <%= @trail.longitude %> </p>
+      <p class = "custom-text-body">Name:     <%= @trail.name %> </p>
+      <p class = "custom-text-body">Address:     <%= @trail.address %> </p>
+      <% if @trail.length != nil %>
+        <p class = "custom-text-body">Length:     <%= @trail.length %> </p>
+      <% else %>
+        <p class = "custom-text-body">Length:     Not specified </p>
+      <% end %>
+      <p class = "custom-text-body">Lat:     <%= @trail.latitude %> </p>
+      <p class = "custom-text-body">Long:     <%= @trail.longitude %> </p>
     </div>
   </div>
 </row>
+
+
 
 
 <script type="text/javascript">
