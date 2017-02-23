@@ -15,6 +15,19 @@ body {
   border-width: thin;
 }
 
+.show-box {
+  padding: 1%;
+  background: rgba(0, 0, 0, .7);
+  /*padding: 10px 10px 10px 10px;*/
+  /*border-color: rgb(168, 168, 168);*/
+  border-style: solid;
+  border-width: thin;
+}
+
+.custom-text-body {
+  font-family: "Source Sans Pro", serif;
+}
+
 .box {
   margin-top: 10%;
   background: rgba(0, 0, 0, .7);
@@ -38,6 +51,14 @@ body {
 .table-box {
   margin-top: 2.5%;
 
+  /*padding: 10px 10px 10px 10px;*/
+  /*border-color: rgb(168, 168, 168);*/
+
+}
+
+.map-box {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
   /*padding: 10px 10px 10px 10px;*/
   /*border-color: rgb(168, 168, 168);*/
 

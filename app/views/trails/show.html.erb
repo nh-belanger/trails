@@ -8,13 +8,35 @@
   </div>
 </div>
 
+
 <div class="small-12 large-8 small-centered large-centered columns">
-  <div class="table-box">
+  <div class="map-box">
     <div style='width: 800px;'>
-      <div id="map" style='width: 800px; height: 400px;'></div>
+      <div id="map" style='width: 800px; height: 250px;'></div>
     </div>
   </div>
 </div>
+
+<row>
+  <div class="small-12 large-8 columns">
+    <div class="show-box">
+      <h4 class="custom-text"> Description </h4>
+      <p class = "custom-text-body"> <%= @trail.description %> </p>
+    </div>
+  </div>
+
+  <div class="small-12 large-4 columns">
+    <div class="show-box">
+      <h4 class="custom-text"> The Facts </h4>
+      <p class = "custom-text-body"> <%= @trail.name %> </p>
+      <p class = "custom-text-body"> <%= @trail.address %> </p>
+      <p class = "custom-text-body"> <%= @trail.length %> </p>
+      <p class = "custom-text-body"> <%= @trail.latitude %> </p>
+      <p class = "custom-text-body"> <%= @trail.longitude %> </p>
+    </div>
+  </div>
+</row>
+
 
 <script type="text/javascript">
   handler = Gmaps.build('Google');
