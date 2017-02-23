@@ -12,7 +12,28 @@ body {
   /*padding: 10px 10px 10px 10px;*/
   /*border-color: rgb(168, 168, 168);*/
   border-style: solid;
+  border-width: thin;
 }
+
+.box {
+  margin-top: 10%;
+  background: rgba(0, 0, 0, .7);
+  /*padding: 10px 10px 10px 10px;*/
+  /*border-color: rgb(168, 168, 168);*/
+  border-style: solid;
+  border-width: thin;
+}
+
+.devise-error {
+  margin-top: 10%;
+  background: rgba(0, 0, 0, .7);
+  /*padding: 10px 10px 10px 10px;*/
+  /*border-color: rgb(168, 168, 168);*/
+  border-style: solid;
+  border-color: darkred;
+  border-width: medium;
+}
+
 
 .table-box {
   margin-top: 2.5%;
@@ -23,6 +44,12 @@ body {
 }
 
 .title-text {
+  color: white;
+  text-align: center;
+  font-family: 'Sanchez', serif;
+}
+
+.custom-text {
   color: white;
   text-align: center;
   font-family: 'Sanchez', serif;
@@ -59,4 +86,39 @@ th {
   background-color: rgba(0, 0, 0, 0);
   color: white;
   margin-top: 9px;
+}
+
+/*BUTTONS*/
+.custom-button-small {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-style: solid;
+    border-color: rgb(168, 168, 168);
+    padding: 0px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 75%;
+    font-family: 'Sanchez', serif;
+    color: white;
+    border-width: thin;
+}
+
+.custom-button {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(168, 168, 168);
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 125%;
+    font-family: 'Sanchez', serif;
+    color: white;
+}
+
+/*LINKS*/
+a {
+  color: white;
 }

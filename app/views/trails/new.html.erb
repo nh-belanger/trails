@@ -1,7 +1,22 @@
-<h1>Create a Trail</h1>
-
+<div class="small-12 large-6 small-centered large-centered columns">
+  <div class="title-box">
+    <h1 class = 'title-text'>Add a Trail</h1>
+  </div>
+</div>
+<br>
 <%= simple_form_for @trail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.button :submit %>
+  <div class="row">
+    <div class="column text-center small-12 large-6 small-centered large-centered">
+      <div class="field">
+        <%= f.email_field :name, :placeholder => "Name", autofocus: true %>
+      </div>
+      <div class="field">
+        <%= f.text_field :address, :placeholder => "Address" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Submit", :class => 'custom-button' %>
+      </div>
+    </div>
+  </div>
 <% end %>

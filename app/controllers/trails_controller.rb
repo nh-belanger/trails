@@ -10,6 +10,11 @@ class TrailsController < ApplicationController
 
   def show
     @trail = Trail.find(params[:id])
+    @hash = Gmaps4rails.build_markers(@trail) do |trail, marker|
+      marker.lat trail.latitude
+      marker.lng trail.longitude
+      marker.title trail.name
+    end
   end
 
   def new
