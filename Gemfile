@@ -13,7 +13,7 @@ gem 'foundation-rails'
 gem 'simple_form'
 gem 'gmaps4rails'
 gem 'coffee-rails'
-gem 'forecast-io'
+gem 'forecast_io'
 
 group :development do
   gem 'listen', '~> 3.0.5'

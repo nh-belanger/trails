@@ -15,6 +15,9 @@ class TrailsController < ApplicationController
       marker.lng trail.longitude
       marker.title trail.name
     end
+
+    @weather_summary = ForecastIO.forecast(@trail.latitude, @trail.longitude).currently.summary
+    @weather_temperature = ForecastIO.forecast(@trail.latitude, @trail.longitude).currently.temperature
   end
 
   def new
@@ -49,4 +52,9 @@ class TrailsController < ApplicationController
   def trail_params
     params.require(:trail).permit(:address, :latitude, :longitude, :length, :name, :description)
   end
+
+  ForecastIO.configure do |configuration|
+    configuration.api_key = '3005c7b585dcfef488065585a2bee2a3'
+  end
+
 end

@@ -24,9 +24,28 @@ body {
   border-width: thin;
 }
 
+.weather-box {
+  padding: 1%;
+  background: rgba(0, 0, 0, .7);
+  /*padding: 10px 10px 10px 10px;*/
+  /*border-color: rgb(168, 168, 168);*/
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+  font-family: "Sanchez", serif;
+  margin-bottom: 2.5%
+}
+
 .custom-text-body {
   font-family: "Source Sans Pro", serif;
 }
+
+.custom-text-weather {
+  font-family: "Sanchez", serif;
+  margin: 0;
+  text-align: center;
+}
+
 
 .box {
   margin-top: 10%;
