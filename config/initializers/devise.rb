@@ -259,7 +259,8 @@ Devise.setup do |config|
   # end
 
   config.omniauth :facebook, "383172522054104", "cabd72e080c647ea4489b176d6792b9c",
-                callback_url: "CALLBACK_URL"
+                callback_url: "https://carlisletrails.herokuapp.com/users/auth/facebook/callback", :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}
+
 
   # ==> Mountable engine configurations
   # When using Devise inside an engine, let's call it `MyEngine`, and this engine
