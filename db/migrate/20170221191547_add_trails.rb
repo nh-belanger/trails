@@ -6,7 +6,7 @@ class AddTrails < ActiveRecord::Migration[5.0]
       t.float :longitude, null: false
       t.float :length
       t.string :address, null: false
-      t.string :description, :default => "No description available"
+      t.string :description
     end
   end
 end
