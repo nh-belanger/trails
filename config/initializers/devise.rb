@@ -258,7 +258,7 @@ Devise.setup do |config|
   #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   # end
 
-  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'],
+  config.omniauth :facebook, "383172522054104", "cabd72e080c647ea4489b176d6792b9c",
                 callback_url: "CALLBACK_URL"
 
   # ==> Mountable engine configurations
