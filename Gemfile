@@ -14,6 +14,8 @@ gem 'simple_form'
 gem 'gmaps4rails'
 gem 'coffee-rails'
 gem 'forecast_io'
+gem 'omniauth-facebook'
+
 
 group :development do
   gem 'listen', '~> 3.0.5'
