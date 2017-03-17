@@ -19,6 +19,7 @@
 
 <div class="small-12 large-6 small-centered large-centered columns">
   <div class="weather-box">
+      <h4 class="custom-text"><u>The Weather</u></h4>
       <p class= "custom-text-weather">It is currently <%= @weather_summary %>, with a temperature of <%= @weather_temperature %>&deg;F</p>
   </div>
 </div>
@@ -26,7 +27,7 @@
 <row>
   <div class="small-12 large-8 columns">
     <div class="show-box">
-      <h4 class="custom-text"> Description </h4>
+      <h4 class="custom-text"><u>Description</u></h4>
       <% if @trail.description != '' %>
         <p class = "custom-text-body"> <%= @trail.description %> </p>
       <% else %>
@@ -37,7 +38,7 @@
 
   <div class="small-12 large-4 columns">
     <div class="show-box">
-      <h4 class="custom-text"> The Facts </h4>
+      <h4 class="custom-text"><u> The Facts </u></h4>
       <p class = "custom-text-body">Name:     <%= @trail.name %> </p>
       <p class = "custom-text-body">Address:     <%= @trail.address %> </p>
       <% if @trail.length != nil %>
