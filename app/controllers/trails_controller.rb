@@ -16,7 +16,8 @@ class TrailsController < ApplicationController
       marker.title trail.name
     end
 
-    @weather_summary = ForecastIO.forecast(@trail.latitude, @trail.longitude).currently.summary
+    @weather_summary = ForecastIO.forecast(@trail.latitude, @trail.longitude).currently.summary.downcase
+
     @weather_temperature = ForecastIO.forecast(@trail.latitude, @trail.longitude).currently.temperature
   end
 
