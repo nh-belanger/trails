@@ -51,7 +51,7 @@ class TrailsController < ApplicationController
   private
 
   def trail_params
-    params.require(:trail).permit(:address, :latitude, :longitude, :length, :name, :description)
+    params.require(:trail).permit(:address, :latitude, :longitude, :length, :name, :description, :avatar)
   end
 
   ForecastIO.configure do |configuration|

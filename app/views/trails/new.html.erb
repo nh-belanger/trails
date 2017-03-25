@@ -19,7 +19,12 @@
       <div class="field">
         <%= f.text_area :description, :placeholder => "Description (optional)", cols: 40, rows: 15 %>
       </div>
+      <div class="field">
+        <%= f.label :avatar %>
+        <%= f.file_field :avatar %>
+      </div>
 
+    
       <div class="actions">
         <%= f.submit "Submit", :class => 'custom-button' %>
       </div>
