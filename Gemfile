@@ -15,6 +15,8 @@ gem 'gmaps4rails'
 gem 'coffee-rails'
 gem 'forecast_io'
 gem 'omniauth-facebook'
+gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
 
 
 group :development do
