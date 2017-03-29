@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get "/pages/:page" => "pages#show"
 
   resources :users
-  resources :trails
+  resources :trails do
+    resources :maintenancetickets
+  end
 
   root 'pages#show', page: 'home'
 
