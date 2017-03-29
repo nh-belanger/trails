@@ -1,0 +1,39 @@
+<div class="small-12 large-6 small-centered large-centered columns">
+  <div class="title-box">
+    <h1 class = 'title-text'>Maintenance Ticket</h1>
+  </div>
+</div>
+
+
+<div class="small-12 large-8 small-centered large-centered columns">
+  <div class="table-box">
+    <div style='width: 800px;'>
+      <div id="map" style='width: 800px; height: 400px;'></div>
+    </div>
+  </div>
+</div>
+
+<div class="table-box">
+  <div class="small-12 large-8 small-centered large-centered columns">
+    <table class = "hover">
+      <thead>
+        <tr>
+          <th width="400">Maintenace Tickets</th>
+        </tr>
+        <tr>
+          <th width="200">Location</th>
+          <th width="200">Body</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @maintenancetickets.each do |ticket| %>
+          <tr>
+            <td> <%= link_to "#{ticket.location}", trail_maintenanceticket_path(ticket)  %> </td>
+            <td><%= link_to "#{ticket.body}", trail_maintenanceticket_path(ticket)  %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
