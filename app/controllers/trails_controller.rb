@@ -10,14 +10,19 @@ class TrailsController < ApplicationController
 
   def show
     @trail = Trail.find(params[:id])
+
+    #Maintenanceticket
+    @maintenancetickets = @trail.maintenancetickets
+
+    #Map
     @hash = Gmaps4rails.build_markers(@trail) do |trail, marker|
       marker.lat trail.latitude
       marker.lng trail.longitude
       marker.title trail.name
     end
 
+    #Weather
     @weather_summary = ForecastIO.forecast(@trail.latitude, @trail.longitude).currently.summary.downcase
-
     @weather_temperature = ForecastIO.forecast(@trail.latitude, @trail.longitude).currently.temperature
   end
 

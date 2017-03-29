@@ -50,6 +50,29 @@
       <p class = "custom-text-body">Long:     <%= @trail.longitude %> </p>
     </div>
   </div>
+
+  <div class="table-box">
+    <div class="small-12 large-8 small-centered large-centered columns">
+      <table class = "hover">
+        <thead>
+          <tr>
+            <th width="200">Location</th>
+            <th width="200">Body</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @maintenancetickets.each do |ticket| %>
+            <tr>
+              <td> <%= ticket.location %> </td>
+              <td><%= ticket.body %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 </row>
 
 
