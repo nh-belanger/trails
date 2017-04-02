@@ -40,6 +40,9 @@
     <div>
       <%= f.password_field :password_confirmation, :placeholder => "Confirm Password", autocomplete: "off" %>
     </div>
+    <div>
+      <%= f.select :role, ['walker', 'maintainer']%>
+    </div>
     <br>
     <div class="actions">
       <%= f.submit "Sign up", :class => "custom-button"%>
