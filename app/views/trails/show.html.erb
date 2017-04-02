@@ -8,30 +8,32 @@
   </div>
 </div>
 
-<div class="table-box">
-  <div class="small-12 large-8 small-centered large-centered columns">
-    <table class = "hover">
-      <thead>
-        <tr>
-          <th width="400">Maintenace Tickets</th>
-        </tr>
-        <tr>
-          <th width="200">Location</th>
-          <th width="200">Body</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @maintenancetickets.each do |ticket| %>
+<% if current_user.role == "maintainer" %>
+  <div class="table-box">
+    <div class="small-12 large-8 small-centered large-centered columns">
+      <table class = "hover">
+        <thead>
           <tr>
-            <td> <%= link_to "#{ticket.location}", trail_maintenanceticket_path(ticket)  %> </td>
-            <td><%= link_to "#{ticket.body}", trail_maintenanceticket_path(ticket)  %></td>
+            <th width="400">Maintenace Tickets</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+          <tr>
+            <th width="200">Location</th>
+            <th width="200">Body</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @maintenancetickets.each do |ticket| %>
+            <tr>
+              <td> <%= link_to "#{ticket.location}", trail_maintenanceticket_path(ticket)  %> </td>
+              <td><%= link_to "#{ticket.body}", trail_maintenanceticket_path(ticket)  %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
+<% end %>
 
 <div class="small-12 large-8 small-centered large-centered columns">
   <div class="map-box">
