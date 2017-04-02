@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get "/pages/:page" => "pages#show"
 
+  get "/pages/tickets" => "pages#tickets"
+
   resources :users
   resources :trails do
     resources :maintenancetickets

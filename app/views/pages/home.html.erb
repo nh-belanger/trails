@@ -2,4 +2,32 @@
   <div class="title-box">
     <h1 class = 'title-text'>Carlisle Trails Committee</h1>
   </div>
+  <br>
+  <% if user_signed_in? && current_user.role == "maintainer" %>
+
+    <div class="table-box">
+      <div class="small-12 large-8 small-centered large-centered columns">
+        <table class = "hover">
+          <thead>
+            <tr>
+              <th width="400">Maintenace Tickets</th>
+            </tr>
+            <tr>
+              <th width="200">Location</th>
+              <th width="200">Body</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% Maintenanceticket.all.each do |ticket| %>
+              <tr>
+                <td> <%= link_to "#{ticket.location}", trail_maintenanceticket_path(ticket.trail, ticket)  %> </td>
+                <td><%= link_to "#{ticket.body}", trail_maintenanceticket_path(ticket.trail, ticket)  %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  <% end %>
 </div>
