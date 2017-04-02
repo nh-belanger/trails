@@ -144,11 +144,68 @@ th {
     border-width: thin;
 }
 
+.custom-button-small:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-style: solid;
+    border-color: white;
+    padding: 0px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 75%;
+    font-family: 'Sanchez', serif;
+    color: white;
+    border-width: thin;
+}
+
+.custom-button-small-alert {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-style: solid;
+    border-color: darkred;
+    padding: 0px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 75%;
+    font-family: 'Sanchez', serif;
+    color: white;
+    border-width: thin;
+}
+
+.custom-button-small-alert:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-style: solid;
+    border-color: red;
+    padding: 0px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 75%;
+    font-family: 'Sanchez', serif;
+    color: white;
+    border-width: thin;
+}
+
 .custom-button {
     background-color: rgba(0, 0, 0, 0.8);
     border-style: solid;
     border-width: thin;
     border-color: rgb(168, 168, 168);
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 125%;
+    font-family: 'Sanchez', serif;
+    color: white;
+}
+
+.custom-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-style: solid;
+    border-width: thin;
+    border-color: white;
     padding: 2px 4px;
     text-align: center;
     text-decoration: none;
