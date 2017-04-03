@@ -42,7 +42,11 @@ class TrailsController < ApplicationController
   end
 
   def edit
+
+
     @trail = Trail.find(params[:id])
+
+    user_can_edit?
   end
 
   def update
@@ -60,7 +64,13 @@ class TrailsController < ApplicationController
   private
 
   def trail_params
-    params.require(:trail).permit(:address, :latitude, :longitude, :length, :name, :description, :avatar)
+    params.require(:trail).permit(:address, :latitude, :longitude, :length, :name, :description, :avatar, :creator_id)
+  end
+
+  def user_can_edit?
+    unless current_user.id == @trail.creator_id
+      raise ActionController::RoutingError.new("You must be the trail's creator, or an admin, to edit this trail.")
+    end
   end
 
   ForecastIO.configure do |configuration|

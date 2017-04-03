@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20170402190559) do
     t.float    "length"
     t.string   "address",             null: false
     t.string   "description"
+    t.integer  "creator_id"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"

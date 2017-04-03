@@ -7,6 +7,7 @@ class AddTrails < ActiveRecord::Migration[5.0]
       t.float :length
       t.string :address, null: false
       t.string :description
+      t.integer :creator_id
     end
   end
 end
