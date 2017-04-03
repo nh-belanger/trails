@@ -24,12 +24,10 @@
         <%= f.file_field :avatar %>
       </div>
       <%= f.hidden_field :creator_id, :value => current_user.id %>
-
-
-
       <div class="actions">
         <%= f.submit "Submit", :class => 'custom-button' %>
       </div>
+    
     </div>
   </div>
 <% end %>

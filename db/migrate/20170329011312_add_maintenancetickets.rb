@@ -4,6 +4,7 @@ class AddMaintenancetickets < ActiveRecord::Migration[5.0]
       t.string :location, null: false
       t.string :body, null: false
       t.integer :trail_id
+      t.boolean :completed
     end
   end
 end

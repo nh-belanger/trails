@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   get "/pages/:page" => "pages#show"
 
-  get "/pages/tickets" => "pages#tickets"
+
+
+  put 'trails/:trail_id/maintenanceticket/:id/mark_completed' => 'maintenancetickets#mark_completed', as: :maintenancetickets_mark_completed
 
   resources :users
   resources :trails do

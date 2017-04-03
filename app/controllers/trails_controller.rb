@@ -13,6 +13,7 @@ class TrailsController < ApplicationController
 
     #Maintenanceticket
     @maintenancetickets = @trail.maintenancetickets
+    @maintenancetickets = @maintenancetickets.order(:completed)
 
     #Map
     @hash = Gmaps4rails.build_markers(@trail) do |trail, marker|

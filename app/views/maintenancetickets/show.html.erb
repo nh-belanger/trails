@@ -26,6 +26,14 @@
   </div>
 </div>
 
-<div class="custom-button">
-      <%= link_to 'Delete Ticket', trail_maintenanceticket_path(@maintenanceticket.trail, @maintenanceticket), data: {:confirm => 'Are you sure?'}, :method => :delete %>
+<div class="small-6 large-1 small-centered large-centered columns">
+  <div class="ticket-button">
+      <%= link_to "Edit", edit_trail_maintenanceticket_path(@trail.id, @maintenanceticket) %>
+  </div>
+</div>
+
+<div class="small-6 large-1 small-centered large-centered columns">
+  <div class="ticket-button">
+      <%= link_to("Mark Completed", maintenancetickets_mark_completed_path(@maintenanceticket), :method => :put, :confirm => "Are you sure?") %>
+  </div>
 </div>

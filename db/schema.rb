@@ -16,9 +16,10 @@ ActiveRecord::Schema.define(version: 20170402190559) do
   enable_extension "plpgsql"
 
   create_table "maintenancetickets", force: :cascade do |t|
-    t.string  "location", null: false
-    t.string  "body",     null: false
+    t.string  "location",  null: false
+    t.string  "body",      null: false
     t.integer "trail_id"
+    t.boolean "completed"
   end
 
   create_table "trails", force: :cascade do |t|
@@ -52,7 +53,7 @@ ActiveRecord::Schema.define(version: 20170402190559) do
     t.datetime "updated_at",                          null: false
     t.string   "provider"
     t.string   "uid"
-    t.string   "role"
+    t.string   "role",                                null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

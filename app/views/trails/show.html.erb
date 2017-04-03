@@ -16,7 +16,7 @@
 </div>
 
   <% elsif user_signed_in? && current_user.role == "maintainer" %>
-  <<div class="table-box">
+  <div class="table-box">
     <div class="small-12 large-8 small-centered large-centered columns">
       <table class = "hover">
         <thead>
@@ -36,6 +36,7 @@
             <tr>
               <th width="200">Location</th>
               <th width="200">Body</th>
+              <th width="100">Completed?</th>
             </tr>
           </thead>
 
@@ -44,6 +45,7 @@
               <tr>
                 <td> <%= link_to "#{ticket.location}", trail_maintenanceticket_path(ticket.trail, ticket)  %> </td>
                 <td><%= link_to "#{ticket.body}", trail_maintenanceticket_path(ticket.trail, ticket)  %></td>
+                <td><%= link_to "#{ticket.completed}", trail_maintenanceticket_path(ticket.trail, ticket)  %></td>
               </tr>
             <% end %>
           </tbody>

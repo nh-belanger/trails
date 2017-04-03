@@ -29,6 +29,7 @@
             <tr>
               <th width="200">Location</th>
               <th width="200">Body</th>
+              <th width="100">Completed?</th>
             </tr>
           </thead>
 
@@ -37,11 +38,13 @@
               <tr>
                 <td> <%= link_to "#{ticket.location}", trail_maintenanceticket_path(ticket.trail, ticket)  %> </td>
                 <td><%= link_to "#{ticket.body}", trail_maintenanceticket_path(ticket.trail, ticket)  %></td>
+                <td><%= link_to "#{ticket.completed}", trail_maintenanceticket_path(ticket.trail, ticket)  %></td>
               </tr>
             <% end %>
           </tbody>
         </table>
       </div>
     </div>
+
   <% end %>
 </div>
