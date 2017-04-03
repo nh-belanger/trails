@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170402190559) do
   create_table "maintenancetickets", force: :cascade do |t|
     t.string  "location", null: false
     t.string  "body",     null: false
-    t.integer "trail_id", null: false
+    t.integer "trail_id"
   end
 
   create_table "trails", force: :cascade do |t|

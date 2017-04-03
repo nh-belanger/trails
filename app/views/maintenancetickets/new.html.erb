@@ -1,0 +1,11 @@
+
+
+
+<%= form_for([@trail, @maintenanceticket]) do |f| %>
+  <%= f.text_field :location, :placeholder => "Location" %>
+  <%= f.text_field :body, :placeholder => "Description" %>
+  <%= f.hidden_field :trail_id, :value => @trail.id %>
+  <div class="actions">
+    <%= f.submit "Submit", :class => 'custom-button' %>
+  </div>
+<% end %>

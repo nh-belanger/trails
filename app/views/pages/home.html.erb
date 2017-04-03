@@ -3,8 +3,11 @@
     <h1 class = 'title-text'>Carlisle Trails Committee</h1>
   </div>
   <br>
-  <% if user_signed_in? && current_user.role == "maintainer" %>
-
+  <% if user_signed_in? && current_user.role == 'maintainer' && Maintenanceticket.all.length == 0 %>
+    <div class="weather-box">
+      <h4 class = 'title-text'>No active maintenance tickets</h4>
+    </div>
+  <% elsif user_signed_in? && current_user.role == "maintainer" %>
     <div class="table-box">
       <div class="small-12 large-8 small-centered large-centered columns">
         <table class = "hover">

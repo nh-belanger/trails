@@ -3,7 +3,7 @@ class AddMaintenancetickets < ActiveRecord::Migration[5.0]
     create_table :maintenancetickets do |t|
       t.string :location, null: false
       t.string :body, null: false
-      t.integer :trail_id, null: false
+      t.integer :trail_id
     end
   end
 end

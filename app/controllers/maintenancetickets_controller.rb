@@ -8,14 +8,24 @@ class MaintenanceticketsController < ApplicationController
   end
 
   def new
+    @trail = Trail.find(params[:trail_id])
     @maintenanceticket = Maintenanceticket.new
   end
 
+  def destroy
+    @maintenanceticket = Maintenanceticket.find(params[:id])
+    @maintenanceticket.destroy
+    redirect_to trail_maintenancetickets_path
+    flash[:notice] = "Ticket was Deleted"
+  end
+
   def create
-    @maintenanceticket = Maintenanceticket.new(user_params)
-    if @maintenanceticket.save
+    @maintenanceticket = Maintenanceticket.new(maintenanceticket_params)
+    @trail = Trail.find(params[:trail_id])
+    if @maintenanceticket.save!
+      # Says trail must exist??
       flash[:notice] = "Maintenance ticket created!"
-      redirect_to maintenancetickets_path
+      redirect_to trail_path(@trail)
     else
       flash[:alert] = "Maintenance ticket not created"
       render :new
@@ -24,10 +34,10 @@ class MaintenanceticketsController < ApplicationController
 
   def update
     @maintenanceticket = Maintenanceticket.find(params[:id])
-    @maintenanceticket.update_attributes(user_params)
+    @maintenanceticket.update_attributes(maintenanceticket_params)
     if @maintenanceticket.save
       flash[:notice] = "Nothing bad happened :)"
-      redirect_to users_path
+      redirect_to trail_maintenanceticket_path
     else
       flash[:alert] = "Something went wrong"
       render :show
@@ -36,7 +46,7 @@ class MaintenanceticketsController < ApplicationController
 
   private
 
-  def user_params
-    params.require(:user).permit(:first_name, :last_name)
+  def maintenanceticket_params
+    params.require(:maintenanceticket).permit(:location, :body, :trail_id)
   end
 end

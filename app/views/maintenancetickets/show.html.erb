@@ -25,3 +25,7 @@
       <p class= "custom-text-weather"><%= @maintenanceticket.body %></p>
   </div>
 </div>
+
+<div class="custom-button">
+      <%= link_to 'Delete Ticket', trail_maintenanceticket_path(@maintenanceticket.trail, @maintenanceticket), data: {:confirm => 'Are you sure?'}, :method => :delete %>
+</div>
