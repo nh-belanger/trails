@@ -7,8 +7,17 @@ body {
   background-size: cover;
 }
 
-.title-box {
+.homepage-box {
   margin-top: 10%;
+  background: rgba(0, 0, 0, .7);
+  /*padding: 10px 10px 10px 10px;*/
+  /*border-color: rgb(168, 168, 168);*/
+  border-style: solid;
+  border-width: thin;
+}
+
+.title-box {
+  margin-top: 5%;
   background: rgba(0, 0, 0, .7);
   /*padding: 10px 10px 10px 10px;*/
   /*border-color: rgb(168, 168, 168);*/
