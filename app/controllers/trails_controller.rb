@@ -61,6 +61,13 @@ class TrailsController < ApplicationController
     end
   end
 
+  def destroy
+    @trail = Trail.find(params[:id])
+    @trail.destroy
+    redirect_to trails_path
+    flash[:notice] = "Trail was deleted"
+  end
+
   private
 
   def trail_params
@@ -68,7 +75,7 @@ class TrailsController < ApplicationController
   end
 
   def user_can_edit?
-    unless current_user.id == @trail.creator_id
+    unless current_user.id == @trail.creator_id || current_user.role == "admin"
       raise ActionController::RoutingError.new("You must be the trail's creator, or an admin, to edit this trail.")
     end
   end

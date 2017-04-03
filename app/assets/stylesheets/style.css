@@ -274,7 +274,15 @@ th {
     color: white;
 }
 
-
+.error-msg {
+  width: 100%;
+  color: #FFFFFF;
+  margin: auto;
+  font-family: 'Source Sans Pro', serif;
+  margin: auto;
+  text-align: center;
+  background: rgba(178, 28, 17, 0.5);
+}
 
 
 /*LINKS*/

@@ -27,6 +27,9 @@
       <div class="actions">
         <%= f.submit "Edit", :class => 'custom-button' %>
       </div>
+      <div class="custom-button-small-alert">
+        <%= link_to 'Delete Trail', trail_path(@trail), data: {:confirm => 'Are you sure?'}, :method => :delete %>
+      </div>
     </div>
   </div>
 <% end %>
