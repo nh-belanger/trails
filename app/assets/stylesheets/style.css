@@ -46,6 +46,19 @@ body {
   margin-bottom: 2.5%
 }
 
+.no-ticket-box {
+  padding: 1%;
+  padding-bottom: 0%;
+  background: rgba(0, 0, 0, .7);
+  /*padding: 10px 10px 10px 10px;*/
+  /*border-color: rgb(168, 168, 168);*/
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+  font-family: "Sanchez", serif;
+  margin-top: 2.5%
+}
+
 .custom-text-body {
   font-family: "Source Sans Pro", serif;
 }
@@ -77,9 +90,15 @@ body {
 }
 
 
-.table-box {
-  margin-top: 2.5%;
+.table-box-bottom {
+  /*margin-top: 2.5%;*/
+  /*padding: 10px 10px 10px 10px;*/
+  /*border-color: rgb(168, 168, 168);*/
 
+}
+
+.table-box {
+  margin-top: 2.5%
   /*padding: 10px 10px 10px 10px;*/
   /*border-color: rgb(168, 168, 168);*/
 
@@ -224,6 +243,39 @@ th {
     font-family: 'Sanchez', serif;
     color: white;
 }
+
+.ticket-button {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(168, 168, 168);
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 2.5%;
+    font-size: 125%;
+    font-family: 'Sanchez', serif;
+    color: white;
+}
+
+.ticket-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-style: solid;
+    border-width: thin;
+    border-color: white;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 2.5%;
+    font-size: 125%;
+    font-family: 'Sanchez', serif;
+    color: white;
+}
+
+
+
 
 /*LINKS*/
 a {

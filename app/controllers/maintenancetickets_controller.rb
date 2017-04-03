@@ -8,6 +8,11 @@ class MaintenanceticketsController < ApplicationController
   end
 
   def new
+
+    unless user_can_create?
+      raise ActionController::RoutingError.new("Not Found")
+    end
+
     @trail = Trail.find(params[:trail_id])
     @maintenanceticket = Maintenanceticket.new
   end
@@ -20,6 +25,11 @@ class MaintenanceticketsController < ApplicationController
   end
 
   def create
+
+    unless user_can_create?
+      raise ActionController::RoutingError.new("Not Found")
+    end
+
     @maintenanceticket = Maintenanceticket.new(maintenanceticket_params)
     @trail = Trail.find(params[:trail_id])
     if @maintenanceticket.save!
@@ -48,5 +58,11 @@ class MaintenanceticketsController < ApplicationController
 
   def maintenanceticket_params
     params.require(:maintenanceticket).permit(:location, :body, :trail_id)
+  end
+
+  def user_can_create?
+    if !user_signed_in?
+      raise ActionController::RoutingError.new("Not Found")
+    end
   end
 end

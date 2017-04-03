@@ -8,13 +8,24 @@
       <h4 class = 'title-text'>No active maintenance tickets</h4>
     </div>
   <% elsif user_signed_in? && current_user.role == "maintainer" %>
-    <div class="table-box">
+
+  <div class="table-box">
+    <div class="small-12 large-8 small-centered large-centered columns">
+      <table class = "hover">
+        <thead>
+          <tr>
+            <th width="200">Maintenance Tickets</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+    <div class="table-box-bottom">
       <div class="small-12 large-8 small-centered large-centered columns">
         <table class = "hover">
           <thead>
-            <tr>
-              <th width="400">Maintenace Tickets</th>
-            </tr>
             <tr>
               <th width="200">Location</th>
               <th width="200">Body</th>

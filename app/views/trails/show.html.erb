@@ -6,46 +6,54 @@
   <div class="title-box">
     <h1 class = 'title-text'> <%= @trail.name %> </h1>
   </div>
-  <div class="custom-button">
-      <%= link_to "Create Maintenance Ticket", new_trail_maintenanceticket_path(@trail) %>
-  </div>
 </div>
+
 
 
 
 
 <% if user_signed_in? && current_user.role == "maintainer" && @maintenancetickets.length == 0 %>
-  <div class="small-12 large-6 small-centered large-centered columns">
-  <div class="weather-box">
+  <div class="small-8 large-3 small-centered large-centered columns">
+  <div class="no-ticket-box">
     <p class = 'title-text'>No active maintenance tickets</p>
   </div>
 </div>
 
   <% elsif user_signed_in? && current_user.role == "maintainer" %>
-  <div class="table-box">
+  <<div class="table-box">
     <div class="small-12 large-8 small-centered large-centered columns">
       <table class = "hover">
         <thead>
           <tr>
-            <th width="400">Maintenace Tickets</th>
-          </tr>
-          <tr>
-            <th width="200">Location</th>
-            <th width="200">Body</th>
+            <th width="200">Maintenance Tickets</th>
           </tr>
         </thead>
-
         <tbody>
-          <% @maintenancetickets.each do |ticket| %>
-            <tr>
-              <td> <%= link_to "#{ticket.location}", trail_maintenanceticket_path(ticket)  %> </td>
-              <td><%= link_to "#{ticket.body}", trail_maintenanceticket_path(ticket)  %></td>
-            </tr>
-          <% end %>
         </tbody>
       </table>
     </div>
   </div>
+    <div class="table-box-bottom">
+      <div class="small-12 large-8 small-centered large-centered columns">
+        <table class = "hover">
+          <thead>
+            <tr>
+              <th width="200">Location</th>
+              <th width="200">Body</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @maintenancetickets.each do |ticket| %>
+              <tr>
+                <td> <%= link_to "#{ticket.location}", trail_maintenanceticket_path(ticket.trail, ticket)  %> </td>
+                <td><%= link_to "#{ticket.body}", trail_maintenanceticket_path(ticket.trail, ticket)  %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
 <% end %>
 
@@ -56,6 +64,14 @@
     </div>
   </div>
 </div>
+
+<% if user_signed_in? == true %>
+  <div class="small-8 large-3 small-centered large-centered columns">
+    <div class="ticket-button">
+        <%= link_to "Create Maintenance Ticket", new_trail_maintenanceticket_path(@trail) %>
+    </div>
+  </div>
+<% end %>
 
 <div class="small-12 large-6 small-centered large-centered columns">
   <div class="weather-box">
@@ -82,7 +98,7 @@
       <p class = "custom-text-body">Name:     <%= @trail.name %> </p>
       <p class = "custom-text-body">Address:     <%= @trail.address %> </p>
       <% if @trail.length != nil %>
-        <p class = "custom-text-body">Length:     <%= @trail.length %> </p>
+        <p class = "custom-text-body">Length:     <%= @trail.length %> miles</p>
       <% else %>
         <p class = "custom-text-body">Length:     Not specified </p>
       <% end %>
@@ -90,6 +106,8 @@
       <p class = "custom-text-body">Long:     <%= @trail.longitude %> </p>
     </div>
   </div>
+
+
 
 
 </row>
