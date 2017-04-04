@@ -25,6 +25,15 @@ body {
   border-width: thin;
 }
 
+.table-header-box {
+  margin-top: 5%;
+  margin-bottom: 0%;
+  background: rgba(0, 0, 0, .7);
+  /*padding: 10px 10px 10px 10px;*/
+  /*border-color: rgb(168, 168, 168);*/
+
+}
+
 .show-box {
   padding: 1%;
   background: rgba(0, 0, 0, .7);

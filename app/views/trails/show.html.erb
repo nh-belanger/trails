@@ -16,19 +16,12 @@
 </div>
 
   <% elsif user_signed_in? && current_user.role == "maintainer" %>
-  <div class="table-box">
-    <div class="small-12 large-12 small-centered large-centered columns">
-      <table class = "hover">
-        <thead>
-          <tr>
-            <th width="200">Maintenance Tickets</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
+  <div class="small-12 large-6 small-centered large-centered columns">
+    <div class="table-header-box">
+      <h4 class = 'title-text'>Open Tickets</h4>
     </div>
   </div>
+
     <div class="table-box-bottom">
       <div class="small-12 large-12 small-centered large-centered columns">
         <table class = "hover">
@@ -57,7 +50,7 @@
 
 <div class="small-12 large-8 small-centered large-centered columns">
   <div class="map-box">
-    <div style='width: 800px;'>
+    <div style='width: 1000px; length: 600px;'>
       <div id="map" style='width: 800px; height: 250px;'></div>
     </div>
   </div>

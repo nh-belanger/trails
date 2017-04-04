@@ -7,26 +7,22 @@
     <div class="weather-box">
       <h4 class = 'title-text'>No active maintenance tickets</h4>
     </div>
-  <% elsif user_signed_in? && current_user.role == "maintainer" %>
+  <% elsif current_user.role == "maintainer" %>
+</div>
 
-  <div class="table-box">
-    <div class="small-12 large-12 small-centered large-centered columns">
-      <table class = "hover">
-        <thead>
-          <tr>
-            <th width="200">Maintenance Tickets</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-    </div>
+<div class="small-12 large-6 small-centered large-centered columns">
+  <div class="table-header-box">
+    <h4 class = 'title-text'>Open Tickets</h4>
   </div>
+</div>
+
+
     <div class="table-box-bottom">
       <div class="small-12 large-12 small-centered large-centered columns">
         <table class = "hover">
           <thead>
             <tr>
+              <th width="200">Trail</th>
               <th width="200">Location</th>
               <th width="600">Body</th>
               <th width="100">Completed?</th>
@@ -36,9 +32,14 @@
           <tbody>
             <% Maintenanceticket.all.each do |ticket| %>
               <tr>
+                <td> <%= link_to "#{ticket.trail.name}", trail_path(ticket.trail)  %> </td>
                 <td> <%= link_to "#{ticket.location}", trail_maintenanceticket_path(ticket.trail, ticket)  %> </td>
                 <td><%= link_to "#{ticket.body}", trail_maintenanceticket_path(ticket.trail, ticket)  %></td>
-                <td><%= link_to "#{ticket.completed}", trail_maintenanceticket_path(ticket.trail, ticket)  %></td>
+                <% if ticket.completed == true %>
+                  <td><%= link_to "Yes", trail_maintenanceticket_path(ticket.trail, ticket)  %> </td>
+                <% elsif ticket.completed == false %>
+                  <td><%= link_to "No", trail_maintenanceticket_path(ticket.trail, ticket)  %></td>
+                <% end %>
               </tr>
             <% end %>
           </tbody>
