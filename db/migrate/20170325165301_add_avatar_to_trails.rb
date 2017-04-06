@@ -1,9 +1,9 @@
 class AddAvatarToTrails < ActiveRecord::Migration[5.0]
   def self.up
-    add_attachment :trails, :avatar
+    add_attachment :users, :avatar
   end
 
   def self.down
-    remove_attachment :trails, :avatar
+    remove_attachment :users, :avatar
   end
 end
