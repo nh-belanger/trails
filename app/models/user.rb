@@ -8,6 +8,9 @@ class User < ApplicationRecord
   validates :last_name, presence: true
 
 
+  mount_uploader :profile_picture, ProfilePictureUploader
+
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
@@ -27,10 +30,4 @@ class User < ApplicationRecord
       end
     end
   end
-
-
-  
-
-
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 end

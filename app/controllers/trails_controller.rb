@@ -72,7 +72,7 @@ class TrailsController < ApplicationController
   private
 
   def trail_params
-    params.require(:trail).permit(:address, :latitude, :longitude, :length, :name, :description, :creator_id)
+    params.require(:trail).permit(:address, :latitude, :longitude, :length, :name, :description, :creator_id, :picture)
   end
 
   def user_can_edit?

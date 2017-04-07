@@ -7,6 +7,7 @@ class Trail < ApplicationRecord
 
   has_many :maintenancetickets
 
+  mount_uploader :picture, TrailsUploaderUploader
 
 
 

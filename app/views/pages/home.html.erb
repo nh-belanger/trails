@@ -2,7 +2,9 @@
   <div class="homepage-box">
     <h1 class = 'title-text'>Carlisle Trails Committee</h1>
     <div>
-        <%= image_tag current_user.avatar.url(:square) %>
+      <% if user_signed_in? == true %>
+        <%= current_user.profile_picture %>
+      <% end %>
     </div>
 
   </div>
@@ -55,3 +57,7 @@
 
   <% end %>
 </div>
+
+<% if user_signed_in? == true %>
+  <%= image_tag current_user.profile_picture %>
+<% end %>
