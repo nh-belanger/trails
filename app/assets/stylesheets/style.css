@@ -7,13 +7,53 @@ body {
   background-size: cover;
 }
 
+
+.menu_vertical {
+  list-style-type: none;
+}
+
 .homepage-box {
   margin-top: 10%;
   background: rgba(0, 0, 0, .7);
   /*padding: 10px 10px 10px 10px;*/
   /*border-color: rgb(168, 168, 168);*/
-  border-style: solid;
+
   border-width: thin;
+}
+
+.profile-picture {
+  margin-bottom: 10px;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 0.8rem 0.4rem;
+    line-height: 1;
+}
+
+.top-bar-section .has-dropdown > a:after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+
+.ul.dropdown.menu {
+  background: rgba(0, 0, 0, 0);
+}
+
+.please-work {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 6px;
+    content: '';
+    border-bottom-width: 0;
+    border-top-style: solid;
+    border-color: #FFFFFF transparent transparent;
+    right: 5px;
+    margin-top: -3px;
 }
 
 .title-box {
@@ -21,8 +61,16 @@ body {
   background: rgba(0, 0, 0, .7);
   /*padding: 10px 10px 10px 10px;*/
   /*border-color: rgb(168, 168, 168);*/
-  border-style: solid;
+
   border-width: thin;
+}
+
+.title-box-trail {
+  margin-top: 5%;
+  background: rgba(0, 0, 0, .7);
+  /*padding: 10px 10px 10px 10px;*/
+  /*border-color: rgb(168, 168, 168);*/
+
 }
 
 .table-header-box {
@@ -39,7 +87,7 @@ body {
   background: rgba(0, 0, 0, .7);
   /*padding: 10px 10px 10px 10px;*/
   /*border-color: rgb(168, 168, 168);*/
-  border-style: solid;
+
   border-width: thin;
 }
 
@@ -48,7 +96,7 @@ body {
   background: rgba(0, 0, 0, .7);
   /*padding: 10px 10px 10px 10px;*/
   /*border-color: rgb(168, 168, 168);*/
-  border-style: solid;
+
   border-width: thin;
   text-align: center;
   font-family: "Sanchez", serif;
@@ -61,8 +109,7 @@ body {
   background: rgba(0, 0, 0, .7);
   /*padding: 10px 10px 10px 10px;*/
   /*border-color: rgb(168, 168, 168);*/
-  border-style: solid;
-  border-width: thin;
+
   text-align: center;
   font-family: "Sanchez", serif;
   margin-top: 2.5%
@@ -84,7 +131,7 @@ body {
   background: rgba(0, 0, 0, .7);
   /*padding: 10px 10px 10px 10px;*/
   /*border-color: rgb(168, 168, 168);*/
-  border-style: solid;
+
   border-width: thin;
 }
 
@@ -93,7 +140,7 @@ body {
   background: rgba(0, 0, 0, .7);
   /*padding: 10px 10px 10px 10px;*/
   /*border-color: rgb(168, 168, 168);*/
-  border-style: solid;
+
   border-color: darkred;
   border-width: medium;
 }
@@ -113,11 +160,17 @@ body {
 
 }
 
+.trail-buttons {
+  margin-top: 2%;
+}
+
 .map-box {
   margin-top: 2.5%;
   margin-bottom: 2.5%;
   /*padding: 10px 10px 10px 10px;*/
   /*border-color: rgb(168, 168, 168);*/
+  background-color: rgba(0,0,0,.7);
+  padding: 1% 1% 1% 1%;
 
 }
 
@@ -168,8 +221,8 @@ th {
 
 /*BUTTONS*/
 .custom-button-small {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-style: solid;
+    background-color: rgba(0, 0, 0, 0.7);
+
     border-color: rgb(168, 168, 168);
     padding: 0px 8px;
     text-align: center;
@@ -182,8 +235,8 @@ th {
 }
 
 .custom-button-small:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-style: solid;
+    background-color: rgba(0, 0, 0, 0.9);
+
     border-color: white;
     padding: 0px 8px;
     text-align: center;
@@ -196,8 +249,8 @@ th {
 }
 
 .custom-button-small-alert {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-style: solid;
+    background-color: rgba(0, 0, 0, 0.7);
+
     border-color: darkred;
     padding: 0px 8px;
     text-align: center;
@@ -210,8 +263,8 @@ th {
 }
 
 .custom-button-small-alert:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-style: solid;
+    background-color: rgba(0, 0, 0, 0.9);
+
     border-color: red;
     padding: 0px 8px;
     text-align: center;
@@ -224,8 +277,8 @@ th {
 }
 
 .custom-button {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-style: solid;
+    background-color: rgba(0, 0, 0, 0.7);
+
     border-width: thin;
     border-color: rgb(168, 168, 168);
     padding: 2px 4px;
@@ -239,8 +292,8 @@ th {
 }
 
 .custom-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-style: solid;
+    background-color: rgba(0, 0, 0, 0.9);
+
     border-width: thin;
     border-color: white;
     padding: 2px 4px;
@@ -254,8 +307,8 @@ th {
 }
 
 .ticket-button {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-style: solid;
+    background-color: rgba(0, 0, 0, 0.7);
+
     border-width: thin;
     border-color: rgb(168, 168, 168);
     padding: 2px 4px;
@@ -269,8 +322,8 @@ th {
 }
 
 .ticket-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-style: solid;
+    background-color: rgba(0, 0, 0, 0.9);
+
     border-width: thin;
     border-color: white;
     padding: 2px 4px;

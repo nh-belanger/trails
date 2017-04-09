@@ -1,5 +1,5 @@
 <div class="small-12 large-6 small-centered large-centered columns">
-  <div class="title-box">
+  <div class="title-box-trail">
     <h1 class = 'title-text'>Add a Trail</h1>
   </div>
 </div>
@@ -19,14 +19,14 @@
       <div class="field">
         <%= f.text_area :description, :placeholder => "Description (optional)", cols: 40, rows: 15 %>
       </div>
-      <div class>
-        <%= f.file_field :picture %>
+      <div>
+        <label for="picture" class="button">Upload File</label>
+        <input type="file" id="picture" class="show-for-sr">
       </div>
       <%= f.hidden_field :creator_id, :value => current_user.id %>
       <div class="actions">
         <%= f.submit "Submit", :class => 'custom-button' %>
       </div>
-
     </div>
   </div>
 <% end %>

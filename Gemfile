@@ -15,9 +15,9 @@ gem 'gmaps4rails'
 gem 'coffee-rails'
 gem 'forecast_io'
 gem 'omniauth-facebook'
-gem 'aws-sdk', '~> 2.3'
 gem 'fog'
 gem 'carrierwave'
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 
 
 group :development do

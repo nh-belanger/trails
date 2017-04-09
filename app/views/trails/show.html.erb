@@ -2,13 +2,24 @@
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script>
 
-<div class="small-12 large-6 small-centered large-centered columns">
+<row>
+<div class="small-12 large-6 columns">
   <div class="title-box">
     <h1 class = 'title-text'> <%= @trail.name %> </h1>
-
-
   </div>
 </div>
+
+<div class="small-12 large-3 columns">
+  <% if user_signed_in? == true %>
+      <a href='/trails/<%= @trail.id %>/maintenancetickets/new' class="button">Create Ticket</a>
+  <% end %>
+</div>
+<div class="small-12 large-3 columns">
+  <% if user_signed_in? == true %>
+    <a href="/trails/<%= @trail.id %>/edit" class="button">Edit</a>
+  <% end %>
+</div>
+
 
 <% if user_signed_in? && current_user.role == "maintainer" && @maintenancetickets.length == 0 %>
   <div class="small-8 large-3 small-centered large-centered columns">
@@ -50,28 +61,23 @@
 
 <% end %>
 
-<div class="small-12 large-8 small-centered large-centered columns">
+<div class="small-12 large-10 columns">
   <div class="map-box">
-    <div style='width: 1000px; length: 600px;'>
-      <div id="map" style='width: 800px; height: 250px;'></div>
+    <h4 class="custom-text"><u>The Map</u></h4>
+    <div style='width: 1200px; length: 800px;'>
+      <div id="map" style='width: 1000px; height: 400px;'></div>
     </div>
   </div>
 </div>
 
+<div class="small-12 large-2 large-centered columns">
 <% if user_signed_in? == true %>
-<row>
-  <div class="small-6 large-3 small-centered large-centered columns">
-    <div class="ticket-button">
-        <%= link_to "Create Maintenance Ticket", new_trail_maintenanceticket_path(@trail) %>
-    </div>
-  </div>
-  <div class="small-6 large-1 small-centered large-centered columns">
-    <div class="ticket-button">
-        <%= link_to "Edit", edit_trail_path(@trail) %>
-    </div>
-  </div>
-</row>
+  <ul class="button-group">
+    <li><a href='/trails/<%= @trail.id %>/maintenancetickets/new' class="button">Create Ticket</a></li>
+    <li><a href="/trails/<%= @trail.id %>/edit" class="button">Edit</a></li>
+  </ul>
 <% end %>
+</div>
 
 <div class="small-12 large-6 small-centered large-centered columns">
   <div class="weather-box">

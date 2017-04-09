@@ -9,6 +9,14 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
   </head>
 
   <body>
@@ -37,9 +45,16 @@
         </div>
       <% else %>
         <div class="top-bar-right">
-          <ul class="menu">
-            <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
-            <li><a href='/users/edit'><%= current_user.first_name %></a></li>
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li>
+              <a href="#"> <%= current_user.first_name %> </a>
+              <ul class="menu_vertical">
+                <div class="please-work">
+                  <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
+                  <li><%= link_to 'Sign Out', destroy_user_session_path %></li>
+                </div>
+              </ul>
+            </li>
             <li>&nbsp;</li>
           </ul>
         </div>
